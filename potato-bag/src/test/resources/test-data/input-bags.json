@@ -1,0 +1,38 @@
+[
+  {
+    "potatoesNumber": 10,
+    "supplier": "De Coster",
+    "packedDate": "2018-03-27T08:53:27.956+0000",
+    "price": 10
+  },
+  {
+    "potatoesNumber": 5,
+    "supplier": "De Coster",
+    "packedDate": "2018-03-27T08:53:27.956+0000",
+    "price": 12
+  },
+  {
+    "potatoesNumber": 6,
+    "supplier": "Owel",
+    "packedDate": "2018-03-27T08:53:27.956+0000",
+    "price": 50
+  },
+  {
+    "potatoesNumber": 10,
+    "supplier": "Patatas Ruben",
+    "packedDate": "2018-03-27T08:53:27.956+0000",
+    "price": 11
+  },
+  {
+    "potatoesNumber": 11,
+    "supplier": "Patatas Ruben",
+    "packedDate": "2018-03-27T08:53:27.956+0000",
+    "price": 10
+  },
+  {
+    "potatoesNumber": 10,
+    "supplier": "De Coster",
+    "packedDate": "2018-03-27T08:53:27.956+0000",
+    "price": 10
+  }
+]

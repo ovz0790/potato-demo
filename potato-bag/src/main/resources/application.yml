@@ -1,0 +1,45 @@
+server:
+  port: ${PORT_TO_EXPOSE:8085}
+spring:
+  application:
+    name: potato-demo
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  datasource:
+    driverClassName: org.h2.Driver
+    url: "jdbc:h2:mem:dbo;\
+      DB_CLOSE_DELAY=-1;\
+      DB_CLOSE_ON_EXIT=FALSE"
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+      FAIL_ON_EMPTY_BEANS: false
+    default-property-inclusion: non_null
+
+logging:
+  level:
+    ROOT: INFO
+    nl.potato.market: DEBUG
+    org.springframework: INFO
+
+liquibase:
+    enabled: true
+    change-log: classpath:potato_changelog.xml
+
+---
+bags:
+  page:
+    size: 3
+
+---
+data:
+  file:
+    path: test-data\input-bags.json
