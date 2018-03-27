@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>Manage potato bags application</name>
+    <description>Application that provides RESTful APIs for Get
+        list of potato bags or add new bag
+        to the market operations</description>
+
+    <groupId>nl.potato.market</groupId>
+    <artifactId>potato-db</artifactId>
+
+
+    <parent>
+        <artifactId>potato-demo</artifactId>
+        <groupId>nl.potato.market</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <liquibase.version>3.5.3</liquibase.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <version>${liquibase.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="v1.0.1" author="Olga_Zlobina" context="schema">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="bags"/>
+            </not>
+        </preConditions>
+
+        <createTable tableName="bags"
+                     remarks="Bags store table">
+            <column name="id" type="UUID">
+                <constraints nullable="false"
+                             primaryKey="true"
+                             primaryKeyName="bags_pk"/>
+            </column>
+            <column name="potatoes_number" type="INT"/>
+            <column name="supplier" type="VARCHAR(256)"/>
+            <column name="packed_date" type="TIMESTAMP"/>
+            <column name="price" type="INT"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
