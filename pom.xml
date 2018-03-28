@@ -97,7 +97,6 @@
                     </archive>
                 </configuration>
             </plugin>
-
         </plugins>
         <pluginManagement>
             <plugins>
@@ -105,7 +104,20 @@
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>3.0.1</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
+
         </pluginManagement>
     </build>
 </project>
